@@ -16,7 +16,7 @@ const port = 3000
 // require the driver to connect to the database
 const mongoose = require('mongoose')
 // require the class constructor from different file
-const Dog = require('./dog.js')
+const Pokemon = require('pokemon.js')
 //defining one object using our new constructor
 //only as a testing purpose, this code should be deleted after testing is completed
 //let dog = new Dog({age:5, name: "Boris", breed: "Golden Retriever", isNeutred: false})
