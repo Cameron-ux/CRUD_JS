@@ -56,10 +56,10 @@ app.post('/pokemon', (req, res) => {
     isNeutred = true;
   }
   let pokemon = new Pokemon({
-    age: parseInt(req.body.age), //Number
-    name: req.body.name, //String
-    breed: req.body.breed || "No breed inserted", //String
-    isNeutred: isNeutred //Boolean
+    pokedex: parseInt(req.body.pokedex), //Number
+    type: req.body.type, //String
+    region: req.body.region || "No region inserted", //String
+    isAlive: isAlive //Boolean
   });
   //inserting a dog and checking to see if any errors occured
   pokemon.save(err => {

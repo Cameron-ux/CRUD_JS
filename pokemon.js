@@ -1,55 +1,15 @@
-class Pokemon {
-
-    constructor(type, region, number, attack, stat){
-        this._type = type;
-        this._region = region;
-        this._number = number;
-        this._attack = attack;
-        this._stat = stat;
-    }
-
-    get type(){
-        return this._type;
-    }
-
-    get region(){
-        return this._region;
-    }
-
-    get number(){
-        return this._number;
-    }
-
-    get attack(){
-        return this._attack;
-    }
-
-    get stat(){
-        return this._stat;
-    }
-
-    settype(a){
-        this._type = a;
-    }
-
-    setnumber(b){
-        this._number = b;
-    }
-
-    setregion(n){
-        this._region = n;
-    }
-
-    setattack(at){
-        this._attack = at;
-    }
-
-    setstat(s){
-        this._stat = s;
-    }
-}
-
-
-module.exports = {
-    Pokemon
-}
+//requesting mongooose and Schema so the class can be defined
+const mongoose = require('mongoose')
+const {Schema} = mongoose;
+//setting up the Rules for our class using schema 
+const pokemonSchema = new Schema({
+  
+    type : String,
+    region: String,
+    pokedex: Number,
+    IsAlive: Boolean,
+  })
+//defining the name of the constructor for our class
+const Pokemon = mongoose.model('Pokemon', pokemonSchema);
+//export the class, also called a model or a document, to use in different files
+module.exports = Pokemon
