@@ -49,13 +49,7 @@ class Pokemon {
     }
 }
 
-class Cat{
-    constructor(){
-        this.name ='cat'
-    }
-}
 
 module.exports = {
-    Pokemon,
-    Cat
+    Pokemon
 }
